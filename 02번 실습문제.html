@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02번실습문제</title>
+</head>
+<body>
+    <form action="">
+        <label for="고객명">고객명 :</label>
+        <input type="text" name="username" id="고객명" name="name"><br><br>
+        <label for="전화번호">전화번호 : </label>
+        <input type="tel" name="phone" id="전화번호"><br><br>
+        <label for="">E-mail : </label>
+        <input type="email" name="email"><br><br>
+        <label for="">피자선택 : </label>
+        <select name="pizza" id="">
+            <option value="none">피자를 선택하세요</option>
+            <option value="comb">콤비네이션</option>
+            <option value="pe">페퍼로니</option>
+            <option value="bulgogi">불고기</option>
+            <option value="sweetpotato">고구마</option>
+            <option value="pineapple">하와이안</option>
+        </select>
+        <fieldset>
+            <legend>피자 사이즈</legend>
+            <input type="radio" name="size" value="S" id="s">
+            <label for="s">Small</label><br>
+            <input type="radio" name="size" value="M" id="m">
+            <label for="m">Medium</label><br>
+            <input type="radio" name="size" value="L" id="l">
+            <label for="l">Large</label>
+        </fieldset>
+        <fieldset>
+            <legend>토핑 선택</legend>
+            <input type="checkbox" name="baccon">
+            <label for="">베이컨</label><br>
+            <input type="checkbox" name="cheeze">
+            <label for="">치즈</label><br>
+            <input type="checkbox" name="onion">
+            <label for="">양파</label><br>
+            <input type="checkbox" mushroom>
+            <label for="">버섯</label>
+        </fieldset>
+        <label for="">희망배송시간 : </label>
+        <input type="time" name="time"><br>
+        <label for="">배송시 요청사항 : </label>
+        <textarea name="request" id="" name="request"></textarea>
+        <input type="submit" value="주문하기">
+    </form>
+</body>
+</html>

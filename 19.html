@@ -3,22 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>19</title>
     <style>
-        #table { text-align: center;
+        #bg {
+            width: 297px;
+            height: 35px;
+            background-color: #ffb9b9;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: space-around;
+            position: absolute;
+
+        }
+        .dot{
+            width: 4px;
+            height: 4px;
+            background-color: #d9d9d9;
+            border-radius: 999px;
+
+        }
+        .text{font-weight: 700;
+            color: white;
 
         }
     </style>
 </head>
 <body>
-    <table border="1" id="table">
-        <tr height="35px">
-            <td id="t1">웹툰홈</td>
-            <td id="t2">•</td>
-            <td id="t3">요일별웹툰</td>
-            <td id="t4">•</td>
-            <td id="t5">베스트도전</td>
-        </tr>
-    </table>
+    <div id="bg">
+        <div id="home" class="text">웹툰홈</div>
+        <div id="dot1" class="dot"></div>
+        <div id="daily" class="text">요일별웹툰</div>
+        <div id="dot2" class="dot"></div>
+        <div id="best" class="text">베스트도전</div>
+    </div>
 </body>
 </html>

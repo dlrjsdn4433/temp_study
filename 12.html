@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12</title>
+    <style>
+        #img {
+            width: 320px;
+            height: 320px;
+            background-image: url("이미지/ae952014cdd66cc9657b0dc753deb0628a21778a.jpg");
+            background-position: -120px 550px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #layout {
+            width: 288px;
+            height: 288px;
+            /* border: 1px solid black; */
+        }
+        .text{font-weight: 700;
+            font-size: 24px;
+            color: white;
+            width: 144px;
+            height: 144px;
+            /* border: 1px dotted red; */
+            
+        }
+        .text1{font-weight: 700;
+            font-size: 24px;
+            color: white;
+            width: 188px;
+            height: 144px;
+            /* border: 1px dotted red; */
+            
+        }
+        #first{
+            display: flex;
+            flex-flow: row;
+        }
+        #second{
+            display: flex;
+            flex-flow: row;
+        }
+        .cir{
+            width: 24px;
+            height: 24px;
+            background-color: white;
+            border-radius: 9999px;
+        }
+        #cir1 {
+            background-color: #E3FF92;
+        }
+        #cir2 {
+            background-color: #92F8FF;
+        }
+        #cir3 {
+            background-color: #FF9292;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="img">
+        <div id="layout">
+            <div id="first">
+                <div class="text1">인테리어 디자인</div>
+                <div class="text " style="display: flex; justify-content: end;"><div class="cir" id="cir1"></div></div>
+            </div>
+            <div id="second">
+                <div class="text1" style="display: flex; align-items: end;"><div class="cir" id="cir2"></div></div>
+                <div class="text " style="display: flex; justify-content: end; align-items: end;"><div class="cir" id="cir3"></div></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

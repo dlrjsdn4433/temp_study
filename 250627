@@ -1,0 +1,128 @@
+// 자바스크립트 2일차 문제
+//1.
+var greet = function(name){
+    return `안녕하세요, ${name}님!`
+}
+console.log(greet('이름'))
+
+//2.
+var greet = function(name ='손님'){
+    return `안녕하세요, ${name}님!`
+}
+console.log(greet())
+
+//3. 인수가 부족할 때
+// 다음 함수를 호출 했을 때 출력값은 무엇인가요?
+function show(a,b){
+    console.log(a,b);
+}
+show(1);
+
+//정답은 1,undefined
+// 인수가 부족할 때 부족한 만큼 undefined로 출력된다.
+
+//4. 인수가 초과일 때
+function sum(a,b){
+    return a + b;
+}
+console.log(sum(1,2,3));
+
+//정답은 3
+// 인수가 초과일 때 초과된 만큼 버려진다.
+
+//5.화살표 함수 기본형
+// 화살표 함수로 매개 변수 없이 "Hello!"를 반환하는 함수를 만들고 호출
+var hello = ()  => 'Hello!';
+console.log(hello());
+
+
+//6. 화살표 함수 매개변수 1개
+// 숫자 하나를 받아서 2배를 반환하는 함수를 만들고 호출
+var double = n => n*2;
+console.log(double(4))
+
+//7. 함수 표션식와 선언문의 차이
+
+/*
+    sayHi();
+
+    var sayHi = function(){
+        console.log("Hi!");
+    };
+*/
+// 정답은 함수 선언문에서는 함수 호이스팅이 가능하지만 함수 표현식에서는 불가능하기 때문이다.
+
+//8.반한문 뒤 코드 실행 여부
+/* 다음 함수의 출력결과는 무엇인가요?
+    function test(){
+        return "done";
+        console.log("이 코드는 실행될까요?");
+    }
+    console.log(test());
+*/
+// 결과 : done
+// 반환문 이후의 문은 출력되지 않는다.
+
+//9.나머지 매개변수
+// 함수 addAll을 만들어서 몇개의 숫자를 전달해도 모두 더해 반환하게 만들어보세요.
+function solution(numbers, n) {
+    var answer = 0;
+    return answer;
+}
+
+// 나눗셈의 몫을 구하는 방법
+
+// 1번 방법은 num1을 num2로 나누었을 때 나온 나머지를 num1에서 뺀 후
+// 그 값을 num2로 다시 나누어서 구함
+function solution(num1, num2) {
+    var rest= num1%num2;
+    var answer = (num1-rest)/num2;
+    return answer;
+}
+
+// 2번 방법은 num1을 num2로 나누었을 때 값을 parseInt를 이용하여 정수 부분만 구함.
+function solution(num1, num2) {
+    var answer= parseInt(num1/num2);
+    return answer;
+}
+//n은 양꼬치의 갯수, k는 마신 음료수의갯수
+//양꼬치는 한개에 12000원 음료수는 한개에 2000원
+//양꼬치 10개마다 음료수 한개는 무료
+function solution(n, k) {
+    if(n>=10){ 
+        k=k-parseInt(n/10);}
+    if (k<0)
+        k=0; // 음료수의 갯수가 음수가 될 수 없지만, 양꼬치 10개 음료수 0개를 마시면 계산오류 생김
+    var answer = 12000*n+2000*k;
+    return answer;
+}
+
+console.log(solution(10,0));
+
+// 배열 안 숫자의 평균 구하기
+function solution(numbers) {
+    var answer = 0;
+    var length = numbers.length; // 배열 안 숫자의 합을 나눌 배열 안 숫자의 갯수 구하기
+    var n= 0; 
+    while(n<length){
+        var value = numbers[n]; // 배열 안 숫자를 첫번째 부터 끝까지 꺼내기
+        n=n+1;
+        answer= answer + value; // 배열 안 숫자를 더하기
+    }
+    average= answer/length
+    return average;
+    
+}
+
+// 7 조각난 피자를 n명이서 나눠먹었을 때 1인당 1조각 이상 먹으려면
+// 필요한 피자의 판수를 구하기
+function solution(n) {
+    var answer = 0;
+    answer= parseInt(n/7)+1;
+    if(n%7==0){
+        answer=n/7;
+    }
+    return answer;
+}
+
+//

@@ -1,0 +1,45 @@
+
+//변수 선언과 출력
+var userName = "철수";
+console.log(userName);
+
+// 두 수의 합 구하기
+var num1 = 10;
+var num2 = 20;
+console.log(num1+num2);
+
+// if문 사용
+
+var num = 11;
+if(num>10){
+    console.log("크다.");
+}
+if (num<10){
+    console.log("작다.")
+}
+
+// for문 사용
+for (var i = 1; i <= 5; i++){
+    console.log(i);
+}
+// 조건을 중괄호 안에 넣으면 코드가 무한 루프할 수 있다,..
+
+
+// 함수 만들기
+function add (a,b){
+   /* var로 선언하지 않으면 answer가 전역변수가 된다. */ answer = a+b;
+    return answer;
+}
+
+// 객체 만들기
+var user = {
+    name : '철수',
+    age :  15,
+};
+console.log(user('name')); // (x)
+console.log(user.name); // (o)
+
+// 문자열 길이 구하기
+console.log(length("Hello, world!")); // (x)
+console.log("Hello, world!",length); // (o)
+

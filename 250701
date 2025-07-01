@@ -1,0 +1,133 @@
+// 1번
+function number(num) {
+    if(num % 2 == 0)
+        return `짝수`;
+    else
+        return `홀수`;
+}
+
+console.log(number(6511321564))
+
+// 2번
+var person = {
+    firstName : 'Gildong',
+    lastName : 'Hong',
+    age : 20
+};
+
+for (var abc in person){
+    console.log(`${abc} : ${person[abc]}`)
+}
+
+// 3번
+function add(num1,num2){
+    var answer = num1 + num2;
+    return answer;
+}
+console.log(add(1,3));
+
+// 4번
+greet = () => 'Hello!'
+console.log(greet());
+
+getInfo = (name,age) => `name : ${name}, age :${age}`
+console.log(getInfo('홍길동', 19));
+
+// 5번
+
+function Person(name,age){
+    this.name = name;
+    this.age = age;
+    this.sayHello = function(){
+        return console.log(`제 이름은 ${this.name} 이고 나이는 ${this.age}세 입니다.`)
+    }
+}
+const person1 = new Person("홍길동", 20);
+person1.sayHello();
+
+// 6번
+var user = {
+    name : "koala",
+    age : 20
+}
+user.email = 'koala.ohgiraffers@gmail.com';
+user.age = 21;
+delete user.name;
+console.log(user);
+
+// 7번
+var car = {
+    brand : 'KIA'
+}
+
+var firecar = {
+    color : "red"
+}
+
+firecar.__proto__ = car;
+// console.log(car.brand);
+// console.log(firecar.brand);
+// console.log(firecar.color);
+
+for( const key in firecar){
+    if (firecar.hasOwnProperty(key)){
+        console.log('자신이 가지고 있는 프로퍼티입니다.')
+    }
+    if(!firecar.hasOwnProperty(key)){
+        console.log('상속된 프로퍼티입니다.')
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+// // var car = {
+// //     brand : 'KIA'
+// // }
+
+// // var firecar = {
+// //     color : "red"
+// // }
+
+// // firecar.__proto__ = car;
+// // console.log(car.brand);
+// // console.log(firecar.brand);
+// // console.log(firecar.color);
+
+// // for( const key in firecar){
+// // //     if (firecar.hasOwnProperty(key)){
+// // //         console.log('자신이 가지고 있는 프로퍼티입니다.')
+// // //         console.log(firecar.hasOwnProperty(key))
+// // //     }
+// // //     if (!firecar.hasOwnProperty(key)){
+// // //         console.log('상속된 프로퍼티입니다,')
+// // //         console.log(firecar.hasOwnProperty(key))
+// // //     }
+// // // }
+// // var a =!!true; 
+
+// // console.log(a);
+
+// const student ={
+//     name:'홍길동',
+//     age : 12,
+//     gender : '남자'
+// }
+// for (var a in student){
+//     console.log(`${a} : ${student[a]}`)   
+// }
+
+function Person(name,age){
+    this.name = name,
+    this.age = age,
+    this.sayHello = function(){
+        console.log(`안녕하세요.`)
+    }
+    this.introduce = function(name,age){
+        console.log(`저는 ${this.name}이고, ${this.age}세 입니다.`)
+    }
+} 
+
+const person = new Person('홍길동',19);
+person.sayHello();
+person.introduce();

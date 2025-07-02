@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이건우 문제</title>
+</head>
+<body>
+    <h3>'남수'를 '남규'로 바꾸세요. <br>
+        '타노스'를 제거하세요. <br>
+        '진기명기'를 추가하세요.
+    </h3>
+    <ul id="gamer">
+        <li>남수</li>
+        <li>타노스</li>
+    </ul>
+    <script>
+        const $gamer = document.getElementById('gamer');
+
+        const $namsu = $gamer.firstElementChild;
+        const $namgyu = document.createElement('li')
+        $namgyu.textContent='남규';
+        $gamer.replaceChild($namgyu,$namsu);
+
+        const $thanos = $gamer.lastElementChild;
+        $gamer.removeChild($thanos);
+
+        const $jgmg = document.createElement('li')
+        // $jgmg.textContent='진기명기';
+        $gamer.appendChild(document.createTextNode($jgmg));
+    </script>
+</body>
+</html>

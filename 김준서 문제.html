@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김준서 문제</title>
+</head>
+<body>
+
+    <ul id="food">
+        <li>라면</li>
+        <li>김밥</li>
+        <li>햄버거</li>
+    </ul>
+    <script>
+        const $food = document.getElementById('food');
+        const $ham = $food.lastElementChild;
+        $food.removeChild($ham);
+        const $gim = $food.lastElementChild;
+        $food.removeChild($gim);
+
+        const $li1 = document.createElement('li');
+        $li1.textContent = '피자';
+        $food.append($li1)
+        const $li2 = document.createElement('li');
+        $li2.textContent = '김밥';
+        $food.append($li2)
+        const $li3 = document.createElement('li');
+        $li3.textContent = '치킨';
+        $food.append($li3)
+
+        // const $ram = $food.firstElementChild;
+        // $ram.style.color='blue';
+        const $aa = document.querySelector('li');
+        $aa.style.color= 'blue';
+ 
+    </script>
+</body>
+</html>

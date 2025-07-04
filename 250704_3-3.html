@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>버튼을 클릭하면, 첫번째 체크박스의 항목을 체크해주세요</h1>
+ <input type="checkbox" class="cb"><label>Java</label><br>
+  <input type="checkbox" class="cb"><label>DataBase</label><br>
+  <input type="checkbox" class="cb"><label>Web</label><br>
+
+  <button id="btn">클릭</button>
+
+  <script>
+    const $btn = document.getElementById('btn');
+    const checkboxes = document.querySelectorAll('.cb'); // NodeList 반환
+
+    $btn.addEventListener('click', () => {
+      checkboxes.forEach(checkbox => {
+        checkbox.click();
+      });
+    });
+  </script>
+</body>
+</html>

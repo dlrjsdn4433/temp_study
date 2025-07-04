@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>input 태그에 숫자를 입력하고 버튼을 클릭하면, +10이 된 값을 alert으로 출력해 주세요</h1>
+    <h3>(input 값 : 5 -> alert으로 출력된 값 : 15)</h3>
+    <form action="">
+        <input type="text" id="input" name="number">
+        <button id="btn" type="submit" >출력</button>
+    </form>
+    <script>
+        const $btn = document.getElementById('btn');
+
+        function plus10 (){
+            const $inputValue = document.getElementById('input').value;           
+            alert(Number($inputValue)+10)
+        }       
+
+        $btn.onclick = () => {
+            plus10();
+        }
+
+
+    </script>
+</body>
+</html>

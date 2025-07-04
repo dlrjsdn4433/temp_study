@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center
+            ;
+        }
+    </style>
+</head>
+<body>
+    <h1>setTimeout</h1>
+
+    <script>
+        // setTimeout(() => {
+        //     console.log(1);
+        // },3000); // 3000ms 이후에 작동
+
+    // let count = 1;  
+    // const timerId = setInterval(()=>{
+    //     console.log(count);
+    //     if(count++ ===10){
+    //         clearInterval(timerId);
+    //     }
+    // },1000)
+    </script>
+
+    <button id="btn1">버튼1</button>
+    <button id="btn2">버튼2</button>
+    <button id="btn3">버튼3</button>
+    <button id="btn4">버튼4</button>
+    <button id="btn5">버튼5</button>
+
+    <div id="div1" style="width: 100px; height: 100px; background-color: lightblue
+    ;"></div>
+    <div id="div2" style="width: 100px; height: 100px; background-color: red
+    ;"></div>
+    <div id="div3" style="width: 100px; height: 100px; background-color: yellow
+    ;"></div>
+    <div id="div4" style="width: 100px; height: 100px; background-color: skyblue
+    ;"></div>
+
+    <script>
+        const $btn1 = document.getElementById('bnt1')
+        // window.alert('asdfa')
+        const $div1 = document.getElementById('div1');
+        const answer =window.confirm('1');
+        console.log(answer);
+        if(answer){
+            $div1.textContent = 'true';
+        }else{
+            $div1.textContent = 'false';
+        }
+
+        const $div2 = document.getElementById('div2');
+        const a = window.prompt('아무거나 입력하세요');
+        if(a){
+            $div2.textContent=a
+        }else {
+            $div2.textContent='아무것도 입력되지 않았습니다.'
+        }
+
+        
+    </script>
+
+        <!-- 문제 1 -->
+     <script>
+        const q1 = setTimeout(()=>{
+            console.log('안녕하세요')
+        },1000);
+     </script>
+
+     <!-- 문제 2 -->
+      <script>
+        const q2 = setInterval(()=>{
+            console.log('동작 중..')
+        },2000)
+      </script>
+      <!-- 문제 3 -->
+       <script>
+        let i = 1;
+        const q3 = setInterval(()=>{
+            console.log(i);
+            i=i+1;
+            if(i>=6){
+                clearInterval(q3);
+            }
+
+        },1000)
+       </script>
+       <!-- 문제 4 -->
+        <button id="myBtn" onclick="setInterval(() => {
+            console.log('버튼 클릭됨')            
+        }, 3000);">클릭</button>
+        <!-- 문제 5 -->
+        <script>
+            console.log('3초 후 메시지를 취소합니다');
+        </script>
+
+        <!-- 문제 6 -->
+         <script>
+            setTimeout(() => {
+                console.log(1)
+            }, 1000);
+            setTimeout(() => {
+                console.log(2)
+            }, 2000);
+            setTimeout(() => {
+                console.log(3)
+            }, 3000);
+         </script>
+         <!-- 문제 7-->
+          <script>
+          </script>
+          <!-- 문제 8 -->
+          <script>
+            let count=1;
+            const q8 = setInterval(() => {
+                console.log('로딩 중..')
+                if(count++==6)clearInterval(q8)
+            }, 300);
+          </script> 
+          <!-- 문제 9 -->
+          <!-- <script>
+            for(a==5;){
+            setTimeout(() => {
+                console.log(a)
+                
+            }, 1000);} -->
+          </script>
+</body>
+</html>
